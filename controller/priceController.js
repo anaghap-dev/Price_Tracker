@@ -1,7 +1,6 @@
 const Price = require('../models/products');
 const amazonTracker = require('../amazonTracker');
 const flipkartTracker = require('../flipkartTracker');
-const myntraTracker = require('../myntraTracker');
 
 exports.createTracker = async (req, res) => {
   try {
@@ -36,11 +35,6 @@ exports.createTracker = async (req, res) => {
         console.log('Using Flipkart tracker');
         initialCheck = await flipkartTracker.checkPrice(productUrl);
         console.log('Flipkart tracker result:', initialCheck);
-        break;
-      case 'myntra':
-        console.log('Using Myntra tracker');
-        initialCheck = await myntraTracker.checkPrice(productUrl);
-        console.log('Myntra tracker result:', initialCheck);
         break;
       default:
         return res.status(400).json({ message: 'Unsupported website' });
@@ -126,9 +120,6 @@ exports.checkCurrentPrice = async (req, res) => {
         break;
       case 'flipkart':
         priceCheck = await flipkartTracker.checkPrice(tracker.productUrl);
-        break;
-      case 'myntra':
-        priceCheck = await myntraTracker.checkPrice(tracker.productUrl);
         break;
       default:
         return res.status(400).json({ message: 'Unsupported website' });
