@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const noProducts = document.getElementById('no-products');
     const loader = document.getElementById('loader');
     
-    const API_URL = 'http://localhost:5000/api';
+    const API_URL = 'https://pricetracker-backend-xtkv.onrender.com';
     
     // Website names map for display
     const websiteNames = {
