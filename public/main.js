@@ -135,7 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
         trackingStatus.textContent = 'Loading tracked products...';
         
         try {
-            const response = await fetch(`${API_URL}/trackers`);
+            // Changed endpoint name to avoid ad blockers
+            const response = await fetch(`${API_URL}/price-items`);
             const data = await response.json();
             
             if (!response.ok) {
@@ -184,7 +185,8 @@ document.addEventListener('DOMContentLoaded', function() {
         trackingStatus.textContent = 'Setting up price tracking...';
         
         try {
-            const response = await fetch(`${API_URL}/trackers`, {
+            // Changed endpoint name to avoid ad blockers
+            const response = await fetch(`${API_URL}/price-items`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -231,7 +233,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 checkBtn.disabled = true;
             }
             
-            const response = await fetch(`${API_URL}/trackers/${trackerId}/check`);
+            // Changed endpoint name to avoid ad blockers
+            const response = await fetch(`${API_URL}/price-items/${trackerId}/check`);
             const data = await response.json();
             
             if (!response.ok) {
@@ -271,7 +274,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 productElement.style.opacity = '0.5';
             }
             
-            const response = await fetch(`${API_URL}/trackers/${trackerId}`, {
+            // Changed endpoint name to avoid ad blockers
+            const response = await fetch(`${API_URL}/price-items/${trackerId}`, {
                 method: 'DELETE'
             });
             
