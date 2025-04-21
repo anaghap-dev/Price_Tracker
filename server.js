@@ -9,7 +9,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://beyond2048-frontend.onrender.com'
+  'https://pricetracker-dkcq.onrender.com/'
 ];
 
 // Improved CORS configuration
