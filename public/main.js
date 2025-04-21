@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Changed endpoint name to avoid ad blockers
-            const response = await fetch(`${API_URL}/price`);
+            const response = await fetch(`${API_URL}/catalog`);
             const data = await response.json();
             
             if (!response.ok) {
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Changed endpoint name to avoid ad blockers
-            const response = await fetch(`${API_URL}/price`, {
+            const response = await fetch(`${API_URL}/catalog`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Changed endpoint name to avoid ad blockers
-            const response = await fetch(`${API_URL}/price/${trackerId}/check`);
+            const response = await fetch(`${API_URL}/catalog/${trackerId}/check`);
             const data = await response.json();
             
             if (!response.ok) {
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Changed endpoint name to avoid ad blockers
-            const response = await fetch(`${API_URL}/price/${trackerId}`, {
+            const response = await fetch(`${API_URL}/catalog/${trackerId}`, {
                 method: 'DELETE'
             });
             
