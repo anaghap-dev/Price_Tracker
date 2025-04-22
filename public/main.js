@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const websiteNames = {
         'amazon': 'Amazon',
         'flipkart': 'Flipkart',
-        'myntra': 'Myntra'
     };
     
     // Format price with commas for Indian currency format
