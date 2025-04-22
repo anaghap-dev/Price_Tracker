@@ -3,21 +3,21 @@ const router = express.Router();
 const priceController = require('../controller/priceController');
 
 // Create a new price tracker
-router.post('/catalog', priceController.createTracker);
+router.post('/trackers', priceController.createTracker);
 
 // Get all trackers
-router.get('/catalog', priceController.getAllTrackers);
+router.get('/trackers', priceController.getAllTrackers);
 
 // Get a specific tracker
-router.get('/catalog/:id', priceController.getTracker);
+router.get('/trackers/:id', priceController.getTracker);
 
 // Update a tracker
-router.put('/catalog/:id', priceController.updateTracker);
+router.put('/trackers/:id', priceController.updateTracker);
 
 // Delete a tracker
-router.delete('/catalog/:id', priceController.deleteTracker);
+router.delete('/trackers/:id', priceController.deleteTracker);
 
 // Check current price
-router.get('/catalog/:id/check', priceController.checkCurrentPrice);
+router.get('/trackers/:id/check', priceController.checkCurrentPrice);
 
 module.exports = router;
